@@ -11,10 +11,11 @@ from models.amenity import Amenity
 from models.review import Review
 from models.engine.file_storage import FileStorage
 
-class HBNBCommand(cmd.Cmd):
-    prompt= "(hbnb)"
 
-    def do_quit(self,arg):
+class HBNBCommand(cmd.Cmd):
+    prompt = "(hbnb)"
+
+    def do_quit(self, arg):
         """Exit the command interpreter"""
         return True
 
@@ -96,7 +97,8 @@ class HBNBCommand(cmd.Cmd):
         else:
             try:
                 cls_name = args[0]
-                print([str(all_objs[key]) for key in all_objs if key.startswith(cls_name)])
+                print([str(all_objs[key])
+                       for key in all_objs if key.startswith(cls_name)])
             except NameError:
                 print("** class doesn't exist **")
 
