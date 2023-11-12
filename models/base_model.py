@@ -5,6 +5,7 @@ Module for BaseModel class.
 import uuid
 from datetime import datetime
 
+
 class BaseModel:
     """
     Base class for all models in the AirBnB clone project.
@@ -43,6 +44,6 @@ class BaseModel:
 
     def save(self):
         """
-        Updates the public instance attribute updated_at with the current datetime.
+        Updates the public instance with the current datetime.
         """
         self.updated_at = datetime.now()
